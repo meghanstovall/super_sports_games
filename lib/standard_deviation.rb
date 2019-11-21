@@ -31,5 +31,3 @@ end
 number = new_sum / num_of_integers
 result = Math.sqrt(number)
 final_result = result.round(2)
-
-require 'pry'; binding.pry
