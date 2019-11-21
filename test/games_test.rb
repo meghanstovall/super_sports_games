@@ -28,6 +28,8 @@ class GamesTest < Minitest::Test
     assert_equal [curling, ring_toss], games.events
   end
 
+
+
   def test_it_can_create_headers
     games = Games.new(2017)
     expected = "Event          Max Age             Min Age             Average Age         StdDev Age"
@@ -37,6 +39,10 @@ class GamesTest < Minitest::Test
   def test_it_can_create_a_single_event_summary
     curling = Event.new("Curling", [24, 30, 18, 20, 41])
     games = Games.new(2017)
+    games.add_event(curling)
+
+    require 'pry'; binding.pry
+
     expected = "Curling        41                  18                  26.6                8.28"
     assert_equal expected, games.event_summary(curling)
   end

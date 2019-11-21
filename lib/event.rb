@@ -1,15 +1,17 @@
+require './lib/standard_deviation'
+
 class Event
 
-  attr_accessor :name_of_event, :ages_of_participants
+  attr_reader :name, :ages_of_participants
 
-  def initialize(name, ages_of_participants)
-    @name_of_event = name
-    @ages_of_participants = ages_of_participants
+  def initialize(name, ages)
+    @name = name
+    @ages_of_participants = ages
   end
 
   def max_age
     max_age_value = 0
-    ages_of_participants.each do |age|
+    @ages_of_participants.each do |age|
       if age > max_age_value
         max_age_value = age
       end
@@ -19,7 +21,7 @@ class Event
 
   def min_age
     min_age_value = 200
-    ages_of_participants.each do |age|
+    @ages_of_participants.each do |age|
       if age < min_age_value
         min_age_value = age
       end
@@ -29,17 +31,17 @@ class Event
 
   def average_age
     adding_ages = 0
-    ages_of_participants.each do |age|
+    @ages_of_participants.each do |age|
       adding_ages += age
     end
-    num_of_participants = ages_of_participants.count
+    num_of_participants = @ages_of_participants.count
     average_age_result = adding_ages.to_f / num_of_participants.to_f
-    average_age_final_result =average_age_result.round(2)
+    average_age_final_result = average_age_result.round(2)
     average_age_final_result
   end
 
   def standard_deviation_age
-    return ages_of_participants.standard_deviation.to_f.round(2)
+    return @ages_of_participants.standard_deviation.to_f.round(2)
   end
 
 end
