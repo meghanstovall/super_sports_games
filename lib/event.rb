@@ -39,6 +39,8 @@ class Event
   end
 
   def standard_deviation_age
+    #@ages_of_participants.average_age
+
     return @ages_of_participants.standard_deviation.to_f.round(2)
   end
 
