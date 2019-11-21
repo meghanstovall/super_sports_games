@@ -1,4 +1,4 @@
-require './lib/standard_deviation'
+require_relative 'standard_deviation.rb'
 
 class Event
 
