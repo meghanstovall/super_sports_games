@@ -1,5 +1,3 @@
-require_relative 'standard_deviation.rb'
-
 class Event
 
   attr_reader :name, :ages_of_participants
