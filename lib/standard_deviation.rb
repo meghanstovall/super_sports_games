@@ -14,12 +14,12 @@ average = sum_of_all_nums.to_f / num_of_integers.to_f
 
 new_array_nums_minus_average = []
 ages.each do |number|
-  new_array << (number - average)
+  new_array_nums_minus_average << (number - average)
 end
 
 new_array_nums_squared = []
 new_array_nums_minus_average.each do |number|
-  number = x
+  x = number
   new_array_nums_squared << (number * x)
 end
 
@@ -29,4 +29,6 @@ new_array_nums_squared.each do |number|
 end
 
 number = new_sum / num_of_integers
-result = sqrt(number)
+result = Math.sqrt(number)
+
+require 'pry'; binding.pry
