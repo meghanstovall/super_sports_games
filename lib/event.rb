@@ -1,11 +1,9 @@
-require standard_deviation.rb
-
 class Event
 
-  attr_reader :name_of_event, :ages_of_participants
+  attr_accessor :name_of_event, :ages_of_participants
 
-  def initialize(name_of_event, ages_of_participants)
-    @name_of_event = name_of_event
+  def initialize(name, ages_of_participants)
+    @name_of_event = name
     @ages_of_participants = ages_of_participants
   end
 
@@ -41,7 +39,7 @@ class Event
   end
 
   def standard_deviation_age
-
+    return ages_of_participants.standard_deviation.to_f.round(2)
   end
 
 end

@@ -1,3 +1,5 @@
+require './lib/event'
+
 class Games
   attr_reader :events,
               :year
