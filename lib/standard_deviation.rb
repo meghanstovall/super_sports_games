@@ -12,7 +12,6 @@ def standard_deviation(ages)
   squared_sum = sum_all_squared(squared)
   number = divide_squared_sum_by_count(squared_sum, squared)
   result = square_root(number)
-  puts result
 end
 
 def sum_all(array)
@@ -46,5 +45,3 @@ end
 def square_root(number)
   (Math.sqrt(number)).round(2)
 end
-
-standard_deviation(ages)
