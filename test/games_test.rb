@@ -41,8 +41,6 @@ class GamesTest < Minitest::Test
     games = Games.new(2017)
     games.add_event(curling)
 
-    require 'pry'; binding.pry
-
     expected = "Curling        41                  18                  26.6                8.28"
     assert_equal expected, games.event_summary(curling)
   end
