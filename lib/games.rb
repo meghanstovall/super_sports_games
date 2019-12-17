@@ -14,23 +14,24 @@ class Games
   end
 
   def summary
-    headers + "\n" + all_events_summary
+    headers
+    all_events_summary
   end
 
   def headers
-    "Event".ljust(15) +
+    puts "Event".ljust(15) +
     "Max Age".ljust(20) +
     "Min Age".ljust(20) +
     "Average Age".ljust(20) +
-    "StdDev Age"
+    "StdDev Age" + "\n"
   end
 
   def event_summary(event)
-    event.name.ljust(15) +
-    event.max_age.to_s.ljust(20) +
-    event.min_age.to_s.ljust(20) +
-    event.average_age.to_s.ljust(20) +
-    event.standard_deviation_age.to_s
+    puts "#{event.name.ljust(15)}" +
+    "#{event.max_age.to_s.ljust(20)}" +
+    "#{event.min_age.to_s.ljust(20)}" +
+    "#{event.average_age.to_s.ljust(20)}" +
+    "#{event.standard_deviation_age.to_s}"
   end
 
   def all_events_summary
